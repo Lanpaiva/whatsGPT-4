@@ -1,5 +1,17 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
 
-service: whatsgpt-4
+service: zapgpt
 # app and org for use with dashboard.serverless.com
 #app: your-app-name
 #org: your-org-name
@@ -13,6 +25,10 @@ provider:
   runtime: go1.x
   stage: dev
   region: us-east-1
+
+# you can overwrite defaults here
+#  stage: dev
+#  region: us-east-1
 
 # you can add statements to the Lambda function's IAM Role here
 #  iam:
@@ -43,7 +59,7 @@ package:
 
 functions:
   chat:
-    handler: bin/whatsGPT-4
+    handler: bin/zapgpt
     events:
       - httpApi:
           path: /
